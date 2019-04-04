@@ -25,9 +25,6 @@ class FlaskTestCase(unittest.TestCase):
     def test_get_known_single_result(self):
         ''' Testing with one expected result;
             May fail if database changed.
-            Better to combine with testing using a
-            testing database that is a static snap
-            shot of the database 
         '''
         response = self.client.get(
             "/gene-operations/gene-suggest?species=ailuropoda_melanoleuca&limit=1")
@@ -39,9 +36,6 @@ class FlaskTestCase(unittest.TestCase):
     def test_get_known_multible_results(self):
         ''' Testing with one multible result;
             May fail if database changed.
-            Better to combine with testing using a
-            testing database that is a static snap
-            shot of the database 
         '''
         response = self.client.get(
             "/gene-operations/gene-suggest?query=brc&species=homo_sapiens&limit=5")

@@ -1,4 +1,4 @@
-''' argumets api expects '''
+''' argumets expected by gene_suggest get method '''
 from flask_restplus import reqparse
 
 gene_suggestion_arguments = reqparse.RequestParser()

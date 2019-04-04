@@ -1,4 +1,4 @@
-''' Module '''
+''' gene operations module, only including the gene-suggest get method '''
 from flask_restplus import Resource
 from apis.api import api
 from models import models
