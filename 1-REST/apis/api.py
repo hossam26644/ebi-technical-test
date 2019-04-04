@@ -2,7 +2,7 @@
 from flask_restplus import Api
 
 #create api
-api = Api(doc='/documentation/', title='gene_suggest service', version='1.0',
+api = Api(title='gene_suggest service', version='1.0',
           description='Responds with a list of suggested gene names for the given query and target species.')
 
 @api.errorhandler
