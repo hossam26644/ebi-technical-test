@@ -10,11 +10,11 @@ gene_operations_namespace = api.namespace('gene-operations',
 
 @gene_operations_namespace.route('/gene-suggest')
 class GeneSuggest(Resource):
-    ''' bla bla'''
+    ''' main resource class'''
 
     @api.expect(arguments)
     def get(self):
-        ''' bla bla'''
+        ''' gene-suggest get method'''
         args = arguments.parse_args()
         query = args.get('query')
         species = args.get('species')
@@ -30,7 +30,7 @@ class GeneSuggest(Resource):
 
     #Takes query arguments and uses ORM model to get results
     def retrive_list_from_database(self, query, species, limit):
-        ''' bla bla'''
+        ''' function that retrives result from database'''
         gene = models.Gene
         gene_suggestions = gene.query.filter_by(species=species)	\
                                     .filter(gene.display_label.like(query+'%'))\
