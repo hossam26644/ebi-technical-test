@@ -6,8 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 
-blueprint = Blueprint('api', __name__)
-api = Api(blueprint)
+
 
 app = Flask(__name__)                  #  Create a Flask WSGI application
 app.config['RESTPLUS_MASK_SWAGGER'] = False
