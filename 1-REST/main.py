@@ -62,10 +62,17 @@ class Connection(Resource):            #  Create a RESTful resource
 
 		return {'SuggestedGeneNames':output}
 
+def configure_app(app, configuration):
+    ''' config app from confiuration file '''
+    app.config['SQLALCHEMY_DATABASE_URI'] = configuration.SQLALCHEMY_DATABASE_URI
+    app.config['RESTPLUS_VALIDATE'] = configuration.RESTPLUS_VALIDATE
+    app.config['RESTPLUS_MASK_SWAGGER'] = configuration.RESTPLUS_MASK_SWAGGER
+    app.config['ERROR_404_HELP'] = configuration.RESTPLUS_ERROR_404_HELP
+    app.config['TESTING'] = configuration.FLASK_TESTING
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = configuration.SQLALCHEMY_TRACK_MODIFICATIONS
 
 def initialize_app(app):
     ''' initialize app object'''
-    app.logger.addHandler(FILE_HANDLER)
     configure_app(app, configuration)
     api.init_app(app)
     api.add_namespace(ns_conf)
