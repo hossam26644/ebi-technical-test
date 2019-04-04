@@ -2,7 +2,7 @@
 import json
 
 import unittest
-import main
+import app as main
 
 from configurations import TestConfigurations
 
