@@ -1,12 +1,13 @@
 from flask import Flask, request
 from flask_restplus import Resource, Api, reqparse, fields
-from flask import Blueprint
 
 from flask_sqlalchemy import SQLAlchemy
 
 
 
-
+app = Flask(__name__) #the main app object
+db = SQLAlchemy(app) #the database object
+ma = Marshmallow(app) #marshmallow serialization object
 
 app = Flask(__name__)                  #  Create a Flask WSGI application
 app.config['RESTPLUS_MASK_SWAGGER'] = False
@@ -62,11 +63,16 @@ class Connection(Resource):            #  Create a RESTful resource
 		return {'SuggestedGeneNames':output}
 
 
-
-
+def initialize_app(app):
+    ''' initialize app object'''
+    app.logger.addHandler(FILE_HANDLER)
+    configure_app(app, configuration)
+    api.init_app(app)
+    api.add_namespace(ns_conf)
 				
 		
 
 
 if __name__ == '__main__':
+	initialize_app(app)
     app.run(debug=True) 
