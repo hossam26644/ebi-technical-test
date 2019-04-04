@@ -36,5 +36,5 @@ def initialize_app(app, configuration):
 
 if __name__ == '__main__':
     initialize_app(app, configuration)
-    app.run(debug=configuration.FLASK_DEBUG)
+    app.run(host='0.0.0.0',debug=configuration.FLASK_DEBUG)
 
