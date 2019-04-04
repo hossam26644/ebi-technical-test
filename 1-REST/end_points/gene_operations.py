@@ -1,21 +1,12 @@
 ''' Module '''
-''' Ge'''
 from flask_restplus import Resource
 from apis.api import api
 from models import models
+from .arguments import gene_suggestion_arguments as arguments
 
-from flask_restplus import reqparse
 
-arguments = reqparse.RequestParser()
-arguments.add_argument('query', type=str, help='Query', default="")
-arguments.add_argument('species', type=str, help='Species', required=True)
-arguments.add_argument('limit', type=int, help='Limit', required=True)
-arguments = api.namespace('gene-operations',
+gene_operations_namespace = api.namespace('gene-operations',
                                           description='EBI technical test service')
-
-
-
-
 
 @gene_operations_namespace.route('/gene-suggest')
 class GeneSuggest(Resource):
