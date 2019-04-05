@@ -19,7 +19,7 @@ class FlaskTestCase(unittest.TestCase):
         ''' Test that end point exists
             request with no arguments should give a bad request 400
         '''
-        response = self.client.get('/gene-operations/gene-suggest')
+        response = self.client.get('/gene_operations/gene_suggest')
         self.assertEqual(response.status_code, 400)
 
     def test_get_known_single_result(self):
@@ -27,7 +27,7 @@ class FlaskTestCase(unittest.TestCase):
             May fail if database changed.
         '''
         response = self.client.get(
-            "/gene-operations/gene-suggest?species=ailuropoda_melanoleuca&limit=1")
+            "/gene_operations/gene_suggest?species=ailuropoda_melanoleuca&limit=1")
         data = json.loads(response.get_data(as_text=True))
         data = self.get_result_list_from_dict(data["result_list"])
         self.assertEqual(response.status_code, 200)
@@ -38,7 +38,7 @@ class FlaskTestCase(unittest.TestCase):
             May fail if database changed.
         '''
         response = self.client.get(
-            "/gene-operations/gene-suggest?query=brc&species=homo_sapiens&limit=5")
+            "/gene_operations/gene_suggest?query=brc&species=homo_sapiens&limit=5")
         data = json.loads(response.get_data(as_text=True))
         data = self.get_result_list_from_dict(data["result_list"])
         self.assertEqual(response.status_code, 200)
