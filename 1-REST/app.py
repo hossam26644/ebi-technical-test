@@ -28,7 +28,7 @@ def configure_app(app, configuration):
 def initialize_app(app, configuration):
     ''' initialize app object'''
     #get name space, TODO// relocate to import list
-    from end_points.gene_operations import gene_operations_namespace
+    from namespaces.gene_operations import gene_operations_namespace
     app.logger.addHandler(FILE_HANDLER)
     configure_app(app, configuration)
     api.init_app(app)
