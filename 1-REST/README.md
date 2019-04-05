@@ -19,7 +19,7 @@ Provides a single endpoint `gene_suggest` and responds with with a list of sugge
 **You can also:**
   <img align="right" src="https://d.martinsefcik.sk/uploads/-/system/group/avatar/7/docker-logo.png">
   
-  - Get the docker image `hossam26644/gene_suggest`  create & run your container.![
+  - Get the docker image `hossam26644/gene_suggest`  create & run your container.
   - Run from source code.
  
 # Run from source code:
