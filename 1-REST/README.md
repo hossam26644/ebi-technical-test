@@ -2,8 +2,7 @@
 
 
 Provides a single endpoint `gene_suggest` and responds with with a list of suggested gene names for the given query and target species.
-
-![](https://d2.alternativeto.net/dist/icons/flask_27004.png?width=128&height=128&mode=crop&upscale=false)
+![image alt >](https://d2.alternativeto.net/dist/icons/flask_27004.png?width=128&height=128&mode=crop&upscale=false)
 
 # How to run?
 
@@ -77,11 +76,11 @@ Provides a single endpoint `gene_suggest` and responds with with a list of sugge
 > Setting a max limit is proposed to avoid DoS attacks.
 
 
-# Trying with curl
+# Curl Command Examples 
 some curl commands to try the service
   ```sh
- $ curl -X GET "http://18.218.244.207:5000/gene_operations/gene_suggest?query=brc&species=homo_sapiens&limit=10" -H  "accept: application/json"
+ $ curl -X GET "http://18.218.244.207:5000/gene-operations/gene-suggest?query=brc&species=homo_sapiens&limit=10" -H  "accept: application/json"
  ```
   ```sh
- $ curl -X GET "http://18.218.244.207:5000/gene_operations/gene_suggest?query=hnf&species=ailuropoda_melanoleuca&limit=5" -H  "accept: application/json"
+ $ curl -X GET "http://18.218.244.207:5000/gene-operations/gene-suggest?query=hnf&species=ailuropoda_melanoleuca&limit=5" -H  "accept: application/json"
  ```
