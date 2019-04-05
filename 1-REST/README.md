@@ -1,7 +1,8 @@
 # gene_suggest REST-like web service
 
 
-Provides a single endpoint `gene_suggest` and responds with with a list of suggested gene names for the given query and target species
+Provides a single endpoint `gene_suggest` and responds with with a list of suggested gene names for the given query and target species.
+
 ![](https://d2.alternativeto.net/dist/icons/flask_27004.png?width=128&height=128&mode=crop&upscale=false)
 
 # How to run?
