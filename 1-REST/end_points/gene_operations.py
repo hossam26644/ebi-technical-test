@@ -5,10 +5,10 @@ from models import models
 from .arguments import gene_suggestion_arguments as arguments
 
 
-gene_operations_namespace = api.namespace('gene-operations',
+gene_operations_namespace = api.namespace('gene_operations',
                                           description='EBI technical test service')
 
-@gene_operations_namespace.route('/gene-suggest')
+@gene_operations_namespace.route('/gene_suggest')
 class GeneSuggest(Resource):
     ''' main resource class'''
 
