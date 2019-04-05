@@ -35,7 +35,15 @@ You can also:
   * species - the name of the target species, e.g. `homo_sapiens`
   * limit - the maximum number of suggestions to return, e.g. `10`
 
- # Project structure:
+ # Technologies used:
+ * *flask_restplus* as a microframework.
+ * SQLAlchemy as an ORM.
+ * Marshmallow for serialization.
+ * python *unittest* (coupled with *flask* for api testing)
+ * Docker to create a container.
+ * Amazon EC2 to run the container.
+ 
+ # Structure:
 
 ```
 1-REST
@@ -48,16 +56,23 @@ You can also:
 │───  requirements.txt                 # contains a pinned version of everything that was installed by pip3
 │───  __init__.py
 │
-└────────────apis
+└──────────── apis
 │             │───  api.py             # creates the flask api
 │             └───  __init__.py
 │            
-└────────────end _points
-│       │─── gene_operations.py        #The name space gene_operation, holds the endpoint gene_suggest
-│       │─── arguments.py
-│       └───  __init__.py
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
+└──────────── namespaces
+│             │───  gene_operations.py    # gene_operations namespace (contains the gene_suggest end point)
+│             │───  arguments.py          # arguments expected by endoints
+│             └───  __init__.py
+└──────────── models
+              │───  models.py             # holds the ORM model and Marshmallow model for serialization
+              └───  __init__.py
 ```
+
+> Namespace gene_operations is created, to act as a root to the end point.
+> Setting a max limit is proposed to avoid DoS attacks.
+
+
+
+
+
