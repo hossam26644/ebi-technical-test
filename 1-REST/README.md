@@ -16,15 +16,15 @@ You can also:
   - Run from source code.
  
 # Run from source code:
-  - Start the virtual environment.
+  - Start the virtual environment:
   ```sh
  $ source env/bin/activate
  ```
-  - Download dependancies.
+  - Download dependancies:
   ```sh
- $  pip install -r requirements.txt
+ $  pip3 install -r requirements.txt
  ```
-   - Start service.
+   - Start service:
   ```sh
  $  python3 app.py
  ```
