@@ -2,17 +2,17 @@
 
 
 Provides a single endpoint `gene_suggest` and responds with with a list of suggested gene names for the given query and target species
-
+![](https://d2.alternativeto.net/dist/icons/flask_27004.png?width=128&height=128&mode=crop&upscale=false)
 
 # How to run?
 
-Easiest way:
-  - It is already running on an AWS EC2 machine.  
+**Easiest way:**
+  - It is already running on an [AWS](https://aws.amazon.com/) EC2 machine. ![](https://amazonwebservices.gallerycdn.vsassets.io/extensions/amazonwebservices/aws-vsts-tools/1.1.8/1541109517627/images/logo.png)
   - Just hit the link http://18.218.244.207:5000/ *(documentation)*
   - Endpoint is http://18.218.244.207:5000/gene-operations/gene-suggest
 
-You can also:
-  - Get the docker image `hossam26644/gene_suggest`  create & run your container.
+**You can also:**
+  - Get the docker image `hossam26644/gene_suggest`  create & run your container.![](https://d.martinsefcik.sk/uploads/-/system/group/avatar/7/docker-logo.png)
   - Run from source code.
  
 # Run from source code:
