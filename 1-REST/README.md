@@ -76,6 +76,11 @@ You can also:
 > Setting a max limit is proposed to avoid DoS attacks.
 
 
-
-
-
+# Trying with curl
+some curl commands to try the service
+  ```sh
+ $ curl -X GET "http://18.218.244.207:5000/gene-operations/gene-suggest?query=brc&species=homo_sapiens&limit=10" -H  "accept: application/json"
+ ```
+  ```sh
+ $ curl -X GET "http://18.218.244.207:5000/gene-operations/gene-suggest?query=hnf&species=ailuropoda_melanoleuca&limit=5" -H  "accept: application/json"
+ ```
