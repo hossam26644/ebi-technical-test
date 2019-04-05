@@ -43,7 +43,7 @@ Provides a single endpoint `gene_suggest` and responds with with a list of sugge
  * *Marshmallow* for serialization.
  * *Swagger* for documentation.
  * python *unittest* (coupled with *flask* for api testing)
- * Docker to create a container.
+ * Docker to create containers.
  * Amazon EC2 to run the container.
  
  # Structure:
