@@ -8,12 +8,16 @@ Provides a single endpoint `gene_suggest` and responds with with a list of sugge
 # How to run?
 
 **Easiest way:**
-  - It is already running on an [AWS](https://aws.amazon.com/) EC2 machine. ![](https://amazonwebservices.gallerycdn.vsassets.io/extensions/amazonwebservices/aws-vsts-tools/1.1.8/1541109517627/images/logo.png)
+<img align="right" src="https://amazonwebservices.gallerycdn.vsassets.io/extensions/amazonwebservices/aws-vsts-tools/1.1.8/1541109517627/images/logo.png">
+
+  - It is already running on an [AWS](https://aws.amazon.com/) EC2 machine. ![]
   - Just hit the link http://18.218.244.207:5000/ *(documentation)*
   - Endpoint is http://18.218.244.207:5000/gene-operations/gene-suggest
 
 **You can also:**
-  - Get the docker image `hossam26644/gene_suggest`  create & run your container.![](https://d.martinsefcik.sk/uploads/-/system/group/avatar/7/docker-logo.png)
+  <img align="right" src="https://d.martinsefcik.sk/uploads/-/system/group/avatar/7/docker-logo.png">
+  
+  - Get the docker image `hossam26644/gene_suggest`  create & run your container.![
   - Run from source code.
  
 # Run from source code:
@@ -43,7 +47,7 @@ Provides a single endpoint `gene_suggest` and responds with with a list of sugge
  * *Marshmallow* for serialization.
  * *Swagger* for documentation.
  * python *unittest* (coupled with *flask* for api testing)
- * Docker to create containers.
+ * Docker to create a container.
  * Amazon EC2 to run the container.
  
  # Structure:
