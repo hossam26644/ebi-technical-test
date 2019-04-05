@@ -12,7 +12,7 @@ Easiest way:
   - Endpoint is http://18.218.244.207:5000/gene-operations/gene-suggest
 
 You can also:
-  - Get the docker image `hossam26644/gene_suggest`  and create & run your container.
+  - Get the docker image `hossam26644/gene_suggest`  create & run your container.
   - Run from source code.
  
 # Run from source code:
@@ -29,7 +29,7 @@ You can also:
  $  python3 app.py
  ```
    - Service starts at http://0.0.0.0:5000/gene-operations/gene-suggest
-   - Swagger documetnation at http://0.0.0.0:5000/
+   - Swagger documentation at http://0.0.0.0:5000/
  # The endpoint accepts the following arguments:
   * query - the partial query typed by the user, e.g. `brc` 
     * Default value is an empty string, if the user sends no string.
@@ -40,6 +40,7 @@ You can also:
  * *flask_restplus* as a microframework.
  * *SQLAlchemy* as an ORM.
  * *Marshmallow* for serialization.
+ * *Swagger* for documentation.
  * python *unittest* (coupled with *flask* for api testing)
  * Docker to create a container.
  * Amazon EC2 to run the container.
