@@ -32,13 +32,14 @@ You can also:
    - Swagger documetnation at http://0.0.0.0:5000/
  # The endpoint accepts the following arguments:
   * query - the partial query typed by the user, e.g. `brc` 
+    * Default value is an empty string, if the user sends no string.
   * species - the name of the target species, e.g. `homo_sapiens`
   * limit - the maximum number of suggestions to return, e.g. `10`
 
  # Technologies used:
  * *flask_restplus* as a microframework.
- * SQLAlchemy as an ORM.
- * Marshmallow for serialization.
+ * *SQLAlchemy* as an ORM.
+ * *Marshmallow* for serialization.
  * python *unittest* (coupled with *flask* for api testing)
  * Docker to create a container.
  * Amazon EC2 to run the container.
@@ -70,6 +71,7 @@ You can also:
 ```
 
 > Namespace gene_operations is created, to act as a root to the end point.
+
 > Setting a max limit is proposed to avoid DoS attacks.
 
 
