@@ -37,7 +37,7 @@
  &nbsp;
 # So how gene_suggest service would be deployed (a suggested workflow):
 
- - Code uploaded to a repository (Jira, Github, .. )
+ - Code uploaded to a repository (Bitbucket, Github, .. )
  - *Jenkins* run testing.
  - *Jenkins* containerize application, then calls *Ansible* plugin.
  - *Ansible* configures the server and deploy application.
