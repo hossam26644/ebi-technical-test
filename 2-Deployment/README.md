@@ -36,10 +36,14 @@
  - Kubernetes for automated scaling and managment of the services.
  &nbsp;
 # So how gene_suggest service would be deployed (a suggested workflow):
+
  - Code uploaded to a repository (Jira, Github, .. )
  - Jenkins run testing.
  - Jesnkins containerize application, then calls ansible plugin.
  - Ansible configures the server and deploy application.
  - Server may be managed by Kubernetes to ensure automated managment and scalability.
+
+<img align="center" src="https://github.com/hossam26644/ebi-technical-test/blob/master/2-Deployment/images/workflow.png">
+
 
 
