@@ -6,6 +6,7 @@
  - Makes deployment on servers easier.
 ## 2. Stick to the  RESTful system architectural constraints, especially:
 <img align="right" src="https://jojozhuang.github.io/public/images/restfulapi.png">
+
  - ##### Ensure that the service is not the first layer user accesses:
    - Use **layers**, including a loadbalancer to distribute traffic amoung servers.
    - Layering also ensures the appility to smothely upgrade the system without stopping the service.
