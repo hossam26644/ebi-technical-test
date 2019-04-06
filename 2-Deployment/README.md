@@ -24,8 +24,10 @@
 
 ## 3. Divide the large services to small microservices
  - Each service should be small and independent, allowing scalling individual services based on demand.
+
+<img align="right" src="https://raw.githubusercontent.com/hossam26644/ebi-technical-test/master/2-Deployment/images/Automation.png">
+
 ## 4. Automate the whole process, including deployment
-  <img align="right" src="https://raw.githubusercontent.com/hossam26644/ebi-technical-test/master/2-Deployment/images/Automation.png">
 
  - Automating the devOps removes the pain of managment a large number of services, and stops manual errors.
  - Jenkins can be used to automate application building, testing and containerization. 
