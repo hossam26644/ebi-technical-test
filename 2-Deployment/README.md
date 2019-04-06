@@ -1,5 +1,5 @@
 # How scalability is ensured:
-  <img align="right" src="https://drive.google.com/file/d/1YA9PbRDCdLvf_9UWw3RBzrA3Ui9Y71vm/view?usp=sharing">
+  <img align="right" src="https://raw.githubusercontent.com/hossam26644/ebi-technical-test/master/2-Deployment/images/scalable.png">
 
 
 ## 1. containerization:
