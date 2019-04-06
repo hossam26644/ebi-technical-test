@@ -41,7 +41,7 @@
  - *Jenkins* run testing.
  - *Jenkins* containerize application, then calls *Ansible* plugin.
  - *Ansible* configures the server and deploy application.
- - Servers cluster may be managed by *Kubernetes* to ensure automated managment and scalability.
+ - Servers cluster may be managed by *Kubernetes* to ensure automated services managment and scalability.
 
 <img align="center" src="https://github.com/hossam26644/ebi-technical-test/blob/master/2-Deployment/images/workflow.png">
 
