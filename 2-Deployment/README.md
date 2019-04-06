@@ -1,7 +1,7 @@
+ <img align="right" src="https://raw.githubusercontent.com/hossam26644/ebi-technical-test/master/2-Deployment/images/scalable.png">
+
 # How scalability is ensured:
-  <img align="right" src="https://raw.githubusercontent.com/hossam26644/ebi-technical-test/master/2-Deployment/images/scalable.png">
-
-
+ 
 ## 1. containerization:
   <img align="right" src="https://d.martinsefcik.sk/uploads/-/system/group/avatar/7/docker-logo.png">
 
