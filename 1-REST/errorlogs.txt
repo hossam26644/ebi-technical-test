@@ -44,3 +44,249 @@ Traceback (most recent call last):
   File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 118, in dbapi
     return __import__("MySQLdb")
 ModuleNotFoundError: No module named 'MySQLdb'
+Exception on /gene_operations/gene_suggest [GET]
+Traceback (most recent call last):
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/cursors.py", line 312, in _query
+    db.query(q)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/connections.py", line 224, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (2006, 'MySQL server has gone away')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/namespaces/gene_operations.py", line 24, in get
+    gene_suggestions = self.retrive_list_from_database(query, species, limit)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/namespaces/gene_operations.py", line 40, in retrive_list_from_database
+    .limit(limit).all()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3161, in all
+    return list(self)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 128, in reraise
+    raise value.with_traceback(tb)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/cursors.py", line 312, in _query
+    db.query(q)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/connections.py", line 224, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (2006, 'MySQL server has gone away')
+[SQL: SELECT gene_autocomplete.display_label AS gene_autocomplete_display_label 
+FROM gene_autocomplete 
+WHERE gene_autocomplete.species = %s AND gene_autocomplete.display_label LIKE %s GROUP BY gene_autocomplete.display_label ORDER BY gene_autocomplete.display_label 
+ LIMIT %s]
+[parameters: ('homo_sapiens', 'brc%', 10)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Exception on /gene_operations/gene_suggest [GET]
+Traceback (most recent call last):
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1177, in _execute_context
+    conn = self._revalidate_connection()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 463, in _revalidate_connection
+    "Can't reconnect until invalid "
+sqlalchemy.exc.InvalidRequestError: Can't reconnect until invalid transaction is rolled back
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/namespaces/gene_operations.py", line 24, in get
+    gene_suggestions = self.retrive_list_from_database(query, species, limit)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/namespaces/gene_operations.py", line 40, in retrive_list_from_database
+    .limit(limit).all()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3161, in all
+    return list(self)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    e, util.text_type(statement), parameters, None, None
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 128, in reraise
+    raise value.with_traceback(tb)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1177, in _execute_context
+    conn = self._revalidate_connection()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 463, in _revalidate_connection
+    "Can't reconnect until invalid "
+sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) Can't reconnect until invalid transaction is rolled back
+[SQL: SELECT gene_autocomplete.display_label AS gene_autocomplete_display_label 
+FROM gene_autocomplete 
+WHERE gene_autocomplete.species = %s AND gene_autocomplete.display_label LIKE %s GROUP BY gene_autocomplete.display_label ORDER BY gene_autocomplete.display_label 
+ LIMIT %s]
+[parameters: [{}]]
+Exception on /gene_operations/gene_suggest [GET]
+Traceback (most recent call last):
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/cursors.py", line 312, in _query
+    db.query(q)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/connections.py", line 224, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (2006, 'MySQL server has gone away')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/namespaces/gene_operations.py", line 24, in get
+    gene_suggestions = self.retrive_list_from_database(query, species, limit)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/namespaces/gene_operations.py", line 40, in retrive_list_from_database
+    .limit(limit).all()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3161, in all
+    return list(self)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 128, in reraise
+    raise value.with_traceback(tb)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1244, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/cursors.py", line 312, in _query
+    db.query(q)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/MySQLdb/connections.py", line 224, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (2006, 'MySQL server has gone away')
+[SQL: SELECT gene_autocomplete.display_label AS gene_autocomplete_display_label 
+FROM gene_autocomplete 
+WHERE gene_autocomplete.species = %s AND gene_autocomplete.display_label LIKE %s GROUP BY gene_autocomplete.display_label ORDER BY gene_autocomplete.display_label 
+ LIMIT %s]
+[parameters: ('homo_sapiens', '%', 20)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+Exception on /gene_operations/gene_suggest [GET]
+Traceback (most recent call last):
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1177, in _execute_context
+    conn = self._revalidate_connection()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 463, in _revalidate_connection
+    "Can't reconnect until invalid "
+sqlalchemy.exc.InvalidRequestError: Can't reconnect until invalid transaction is rolled back
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/namespaces/gene_operations.py", line 24, in get
+    gene_suggestions = self.retrive_list_from_database(query, species, limit)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/namespaces/gene_operations.py", line 40, in retrive_list_from_database
+    .limit(limit).all()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3161, in all
+    return list(self)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3317, in __iter__
+    return self._execute_and_instances(context)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3342, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    e, util.text_type(statement), parameters, None, None
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1466, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 383, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 128, in reraise
+    raise value.with_traceback(tb)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1177, in _execute_context
+    conn = self._revalidate_connection()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 463, in _revalidate_connection
+    "Can't reconnect until invalid "
+sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) Can't reconnect until invalid transaction is rolled back
+[SQL: SELECT gene_autocomplete.display_label AS gene_autocomplete_display_label 
+FROM gene_autocomplete 
+WHERE gene_autocomplete.species = %s AND gene_autocomplete.display_label LIKE %s GROUP BY gene_autocomplete.display_label ORDER BY gene_autocomplete.display_label 
+ LIMIT %s]
+[parameters: [{}]]
