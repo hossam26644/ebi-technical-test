@@ -30,10 +30,10 @@
 ## 4. Automate the whole process, including deployment
 
  - Automating the devOps removes the pain of managment a large number of services, and stops manual errors.
- - Jenkins can be used to automate application building, testing and containerization. 
- - Ansible can be used to automate application deployment, this includes deployment across multible differenr servers.
+ - *Jenkins* can be used to automate application building, testing and containerization. 
+ - *Ansible* can be used to automate application deployment, this includes deployment across multible different servers.
  - Automated scaling ensures on the run scaling of services.
- - Kubernetes for automated scaling and managment of the services.
+ - *Kubernetes* for automated scaling and managment of the services.
  &nbsp;
 # So how gene_suggest service would be deployed (a suggested workflow):
 
