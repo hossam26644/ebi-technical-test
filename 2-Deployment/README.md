@@ -1,6 +1,6 @@
 # How scalability is ensured:
 ## 1. containerization:
-<img align="right" src="https://amazonwebservices.gallerycdn.vsassets.io/extensions/amazonwebservices/aws-vsts-tools/1.1.8/1541109517627/images/logo.png">
+  <img align="right" src="https://d.martinsefcik.sk/uploads/-/system/group/avatar/7/docker-logo.png">
 
  - Ensures the apility to run identical copies of the service accross multible servers (horizontal scalability)
  - Makes deployment on servers easier.
