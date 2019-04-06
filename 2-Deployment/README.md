@@ -7,7 +7,7 @@
 
  - Ensures the apility to run identical copies of the service accross multible servers (horizontal scalability)
  - Makes deployment on servers easier.
-## 2. Stick to the  RESTful system architectural constraints, especially:
+## 2. Stick to the  RESTful system architectural constraints, including:
 <img align="right" src="https://raw.githubusercontent.com/hossam26644/ebi-technical-test/master/2-Deployment/images/REST.png">
 
  - ##### Ensure that the service is not the first layer user accesses:
