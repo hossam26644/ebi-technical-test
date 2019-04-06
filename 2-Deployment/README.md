@@ -5,6 +5,7 @@
  - Ensures the apility to run identical copies of the service accross multible servers (horizontal scalability)
  - Makes deployment on servers easier.
 ## 2. Stick to the  RESTful system architectural constraints, especially:
+<img align="right" src="https://listimg.pinclipart.com/picdir/s/219-2198701_restful-search-api-drupal-restful-web-services-logo.png">
  - ##### Ensure that the service is not the first layer user accesses:
    - Use **layers**, including a loadbalancer to distribute traffic amoung servers.
    - Layering also ensures the appility to smothely upgrade the system without stopping the service.
