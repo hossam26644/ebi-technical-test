@@ -1,4 +1,7 @@
 # How scalability is ensured:
+  <img align="right" src="https://drive.google.com/file/d/1YA9PbRDCdLvf_9UWw3RBzrA3Ui9Y71vm/view?usp=sharing">
+
+
 ## 1. containerization:
   <img align="right" src="https://d.martinsefcik.sk/uploads/-/system/group/avatar/7/docker-logo.png">
 
