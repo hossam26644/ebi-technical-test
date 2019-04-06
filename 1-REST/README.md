@@ -1,41 +1,58 @@
 # gene_suggest REST-like web service
 
 
-Provides a single endpoint `gene_suggest` and responds with with a list of suggested gene names for the given query and target species
+Provides a single endpoint `gene_suggest` and responds with a list of suggested gene names for the given query and target species.
 
+![image alt >](https://d2.alternativeto.net/dist/icons/flask_27004.png?width=128&height=128&mode=crop&upscale=false)
 
 # How to run?
 
-Easiest way:
-  - It is already running on an AWS EC2 machine.  
+**Easiest way:**
+<img align="right" src="https://amazonwebservices.gallerycdn.vsassets.io/extensions/amazonwebservices/aws-vsts-tools/1.1.8/1541109517627/images/logo.png">
+
+  - It is already running on an [AWS](https://aws.amazon.com/) EC2 machine.
   - Just hit the link http://18.218.244.207:5000/ *(documentation)*
   - Endpoint is http://18.218.244.207:5000/gene-operations/gene-suggest
 
-You can also:
-  - Get the docker image `hossam26644/gene_suggest`  and create & run your container.
+&nbsp;
+
+**You can also:**
+  <img align="right" src="https://d.martinsefcik.sk/uploads/-/system/group/avatar/7/docker-logo.png">
+  
+  - Get the docker image `hossam26644/gene_suggest`  create & run your container.
   - Run from source code.
  
 # Run from source code:
-  - Start the virtual environment.
+  - Start the virtual environment:
   ```sh
  $ source env/bin/activate
  ```
-  - Download dependancies.
+  - Download dependancies:
   ```sh
- $  pip install -r requirements.txt
+ $  pip3 install -r requirements.txt
  ```
-   - Start service.
+   - Start service:
   ```sh
  $  python3 app.py
  ```
    - Service starts at http://0.0.0.0:5000/gene-operations/gene-suggest
-   - Swagger documetnation at http://0.0.0.0:5000/
+   - Swagger documentation at http://0.0.0.0:5000/
  # The endpoint accepts the following arguments:
   * query - the partial query typed by the user, e.g. `brc` 
+    * Default value is an empty string, if the user sends no string.
   * species - the name of the target species, e.g. `homo_sapiens`
   * limit - the maximum number of suggestions to return, e.g. `10`
 
- # Project structure:
+ # Technologies used:
+ * *flask_restplus* as a microframework.
+ * *SQLAlchemy* as an ORM.
+ * *Marshmallow* for serialization.
+ * *Swagger* for documentation.
+ * python *unittest* (coupled with *flask* for api testing)
+ * Docker to create a container.
+ * Amazon EC2 to run the container.
+ 
+ # Structure:
 
 ```
 1-REST
@@ -48,16 +65,29 @@ You can also:
 │───  requirements.txt                 # contains a pinned version of everything that was installed by pip3
 │───  __init__.py
 │
-└────────────apis
+└──────────── apis
 │             │───  api.py             # creates the flask api
 │             └───  __init__.py
 │            
-└────────────end _points
-│       │─── gene_operations.py        #The name space gene_operation, holds the endpoint gene_suggest
-│       │─── arguments.py
-│       └───  __init__.py
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
+└──────────── namespaces
+│             │───  gene_operations.py    # gene_operations namespace (contains the gene_suggest end point)
+│             │───  arguments.py          # arguments expected by endoints
+│             └───  __init__.py
+└──────────── models
+              │───  models.py             # holds the ORM model and Marshmallow model for serialization
+              └───  __init__.py
 ```
+
+> Namespace gene_operations is created, to act as a root to the end point.
+
+> Setting a max limit is proposed to avoid DoS attacks.
+
+
+# Curl Command Examples 
+some curl commands to try the service
+  ```sh
+ $ curl -X GET "http://18.218.244.207:5000/gene-operations/gene-suggest?query=brc&species=homo_sapiens&limit=10" -H  "accept: application/json"
+ ```
+  ```sh
+ $ curl -X GET "http://18.218.244.207:5000/gene-operations/gene-suggest?query=hnf&species=ailuropoda_melanoleuca&limit=5" -H  "accept: application/json"
+ ```
