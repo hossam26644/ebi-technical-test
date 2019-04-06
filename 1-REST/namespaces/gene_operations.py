@@ -21,7 +21,8 @@ class GeneSuggest(Resource):
         limit = args.get('limit')
 
         #retrive_list_from_database function
-        gene_suggestions = self.retrive_list_from_database(query, species, limit)
+        gene_model = models.Gene
+        gene_suggestions = self.retrive_list_from_database(gene_model,query, species, limit)
         #Using marshmallow for serialization (using the Geneschema)
         gene_schema = models.GeneSchema(many=True)
         output = gene_schema.dump(gene_suggestions).data
@@ -29,13 +30,12 @@ class GeneSuggest(Resource):
         return {'result_list': output}
 
     #Takes query arguments and uses ORM model to get results
-    def retrive_list_from_database(self, query, species, limit):
+    def retrive_list_from_database(self, gene_model, query, species, limit):
         ''' function that retrives result from database'''
-        gene = models.Gene
-        gene_suggestions = gene.query.filter_by(species=species)	\
-                                    .filter(gene.display_label.like(query+'%'))\
-                                    .with_entities(gene.display_label)\
-                                    .group_by(gene.display_label)  \
-                                    .order_by(gene.display_label)\
+        gene_suggestions = gene_model.query.filter_by(species=species)	\
+                                    .filter(gene_model.display_label.like(query+'%'))\
+                                    .with_entities(gene_model.display_label)\
+                                    .group_by(gene_model.display_label)  \
+                                    .order_by(gene_model.display_label)\
                                     .limit(limit).all()
         return gene_suggestions
