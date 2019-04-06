@@ -10,6 +10,7 @@ class DebugConfigurations():
     SQLALCHEMY_DATABASE_URI = "mysql://anonymous@ensembldb.ensembl.org:3306/ensembl_website_90"
     FLASK_TESTING = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_POOL_RECYCLE = 299
 
 class TestConfigurations():
     ''' testing app configuration parameters'''
@@ -20,6 +21,7 @@ class TestConfigurations():
     SQLALCHEMY_DATABASE_URI = "mysql://anonymous@ensembldb.ensembl.org:3306/ensembl_website_90"
     FLASK_TESTING = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_POOL_RECYCLE = 299
 
 class DeploymentConfigurations():
     ''' deployment app configuration parameters'''
@@ -30,3 +32,4 @@ class DeploymentConfigurations():
     SQLALCHEMY_DATABASE_URI = "mysql://anonymous@ensembldb.ensembl.org:3306/ensembl_website_90"
     FLASK_TESTING = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_POOL_RECYCLE = 299

@@ -24,7 +24,7 @@ def configure_app(app, configuration):
     app.config['ERROR_404_HELP'] = configuration.RESTPLUS_ERROR_404_HELP
     app.config['TESTING'] = configuration.FLASK_TESTING
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = configuration.SQLALCHEMY_TRACK_MODIFICATIONS
-
+    app.config['SQLALCHEMY_POOL_RECYCLE'] = configuration.SQLALCHEMY_POOL_RECYCLE
 def initialize_app(app, configuration):
     ''' initialize app object'''
     #get name space, TODO// relocate to import list
