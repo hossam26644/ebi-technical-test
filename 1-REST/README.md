@@ -103,7 +103,7 @@ some curl commands to try the service
 
 # test_file.py:
   - Simple API testing file with 2 test cases driven from service specifications.
-  - Checks that endpoint from status code.
+  - Checks that endpoint exists from status code.
   - Checks that results:
     - Are in order.
     - Have fewer number than limit.
