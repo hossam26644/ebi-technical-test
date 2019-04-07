@@ -40,7 +40,7 @@
     - ex: if major flaws are expected in the system a top down approach is a more efficient approach.
  
 
-
+<img align="center" src="https://github.com/hossam26644/ebi-technical-test/blob/master/3-Testing/images/workflowTesting.png">
 
 
 
