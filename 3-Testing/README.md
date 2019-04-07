@@ -36,7 +36,7 @@
 ### Some points worth mentioning
   - Testing automation does not eliminate manual testing.
   - Testing automation should be a continuous process that does not stop by deployment.
-  - Choosing a testing strategy as a bottom up, top down, or big bang depends on the whole system and its surrounding environment:
+  - Choosing a testing strategy as bottom up, top down, or big bang depends on the whole system and its surrounding environment:
     - ex: if major flaws are expected in the system a top down approach is a more efficient approach.
  
 
