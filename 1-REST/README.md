@@ -38,10 +38,10 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
    - Service starts at http://0.0.0.0:5000/gene-operations/gene-suggest
    - Swagger documentation at http://0.0.0.0:5000/
  # The endpoint accepts the following arguments:
-  * `query` - the partial query typed by the user, e.g. `brc` 
+  * **query** - the partial query typed by the user, e.g. `brc` 
     * Default value is an empty string, if the user sends no string.
-  * `species` - the name of the target species, e.g. `homo_sapiens`
-  * `limit` - the maximum number of suggestions to return, e.g. `10`
+  * **species** - the name of the target species, e.g. `homo_sapiens`
+  * **limit** - the maximum number of suggestions to return, e.g. `10`
 
  # Technologies used:
  * *flask_restplus* as a microframework.
