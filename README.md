@@ -1,4 +1,5 @@
-<img align="center" src="https://www.ebi.ac.uk/eccb/2016/wp-content/uploads/2016/03/EMBL-EBI.png">
+
+<p align="center"><img align="center" src="https://www.ebi.ac.uk/eccb/2016/wp-content/uploads/2016/03/EMBL-EBI.png">
 
 # EMBL-EBI Software Developer (EBI01369) technical test answers repository
 
