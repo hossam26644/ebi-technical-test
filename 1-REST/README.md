@@ -11,7 +11,7 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
 <img align="right" src="https://amazonwebservices.gallerycdn.vsassets.io/extensions/amazonwebservices/aws-vsts-tools/1.1.8/1541109517627/images/logo.png">
 
   - It is already running on an [AWS](https://aws.amazon.com/) EC2 machine.
-  - Just hit the link http://18.218.244.207:5000/ *(documentation)*
+  - Just hit the link http://18.218.244.207:5000/ *(Swagger documentation)*
   - Endpoint is http://18.218.244.207:5000/gene_operations/gene_suggest
 
 &nbsp;
@@ -88,8 +88,8 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
 # Curl Command Examples 
 some curl commands to try the service
   ```sh
- $ curl -X GET "http://18.218.244.207:5000/gene-operations/gene-suggest?query=brc&species=homo_sapiens&limit=10" -H  "accept: application/json"
+ $ curl -X GET "http://18.218.244.207:5000/gene_operations/gene_suggest?query=brc&species=homo_sapiens&limit=10" -H  "accept: application/json"
  ```
   ```sh
- $ curl -X GET "http://18.218.244.207:5000/gene-operations/gene-suggest?query=hnf&species=ailuropoda_melanoleuca&limit=5" -H  "accept: application/json"
+ $ curl -X GET "http://18.218.244.207:5000/gene_operations/gene_suggest?query=hnf&species=ailuropoda_melanoleuca&limit=5" -H  "accept: application/json"
  ```
