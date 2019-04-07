@@ -22,7 +22,7 @@ class GeneSuggest(Resource):
 
         #retrive_list_from_database function
         gene_model = models.Gene
-        gene_suggestions = self.retrive_list_from_database(gene_model,query, species, limit)
+        gene_suggestions = self.retrive_list_from_database(gene_model, query, species, limit)
         #Using marshmallow for serialization (using the Geneschema)
         gene_schema = models.GeneSchema(many=True)
         output = gene_schema.dump(gene_suggestions).data

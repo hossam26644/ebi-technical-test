@@ -1,12 +1,11 @@
-''' Main file, run to start service '''
+''' Main file, initializes and configures flask application '''
 from logging import FileHandler, WARNING
-
+#flask modules
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
-
+# local files
 from apis.api import api
-from configurations import DeploymentConfigurations as configuration
 
 #main elements
 app = Flask(__name__) #the main app object
