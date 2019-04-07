@@ -33,7 +33,7 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
  ```
    - Start service:
   ```sh
- $  python3 app.py
+ $  python3 run.py
  ```
  > You may need to run: *apt-get install -y libmysqlclient-dev* , if libmysqlclient is not installed on the system:
  
@@ -99,3 +99,23 @@ some curl commands to try the service
   ```sh
  $ curl -X GET "http://18.218.244.207:5000/gene_operations/gene_suggest?query=hnf&species=ailuropoda_melanoleuca&limit=5" -H  "accept: application/json"
  ```
+&nbsp;
+
+# test_file.py:
+  - Simple API testing file with 2 testcases driven from service specifications.
+  - Checks that endpoint from status code.
+  - Checks that results:
+    - Are in order.
+    - Have fewer number than limit.
+    - returned with status code 200 (OK)
+
+To run test_file.py:
+  - Start the virtual environment and install requirments as in the run step.
+  - run the test file:
+  
+  ```sh
+ $  python3 test_file.py
+ ```
+
+
+
