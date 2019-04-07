@@ -37,7 +37,7 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
  ```
  > You may need to run: *apt-get install -y libmysqlclient-dev* , if libmysqlclient is not installed on the system:
  
-   - Service starts at http://0.0.0.0:5000/gene-operations/gene-suggest
+   - Service starts at http://0.0.0.0:5000/gene_operations/gene_suggest
    - Swagger documentation at http://0.0.0.0:5000/
  # The endpoint accepts the following arguments:
   * **query** - the partial query typed by the user, e.g. `brc` 
