@@ -67,7 +67,7 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
 │
 └──────────── main
 │             │─── application.py             # main file, initializes and configures application
-│             │─── errorlogs.txt                     # Server writes error logs in this file
+│             │─── errorlogs.txt              # Error logs by server
 │             └───  __init__.py
 │
 └──────────── apis
