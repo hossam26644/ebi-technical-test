@@ -43,7 +43,7 @@
  - *Ansible* configures the server and deploy application.
  - Servers cluster may be managed by *Kubernetes* to ensure automated services management and scalability.
  
-> In this model, Ansible can do jenkins role and vise versa, meaning one tool can be enough, but the common usage of both was the reference in creating this workflow
+> In this model, Ansible can do jenkins role and vise versa, meaning one tool can be enough, but the common usage of each was the reference in creating this workflow
 
 <img align="center" src="https://github.com/hossam26644/ebi-technical-test/blob/master/2-Deployment/images/workflow.png">
 
