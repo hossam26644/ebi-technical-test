@@ -12,7 +12,7 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
 
   - It is already running on an [AWS](https://aws.amazon.com/) EC2 machine.
   - Just hit the link http://18.218.244.207:5000/ *(documentation)*
-  - Endpoint is http://18.218.244.207:5000/gene-operations/gene-suggest
+  - Endpoint is http://18.218.244.207:5000/gene_operations/gene_suggest
 
 &nbsp;
 
