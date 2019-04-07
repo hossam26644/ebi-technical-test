@@ -10,7 +10,7 @@
 ## 2. Stick to the  RESTful system architectural constraints, including:
 <img align="right" src="https://raw.githubusercontent.com/hossam26644/ebi-technical-test/master/2-Deployment/images/REST.png">
 
- - ##### Ensure that the service is not the first layer user accesses:
+ - ##### The service is better not to be the first layer user accesses:
    - Use **layers**, including a load-balancer to distribute traffic among servers.
    - Layering also ensures the ability to smoothly upgrade the system without stopping the service.
 
