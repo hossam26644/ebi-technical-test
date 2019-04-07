@@ -8,10 +8,10 @@ In this repository:
     -  https://github.com/hossam26644/ebi-technical-test/tree/master/1-REST
  
   - How the service would be deployed, and how scalability is ensured.
-    - https://github.com/hossam26644/ebi-technical-test/tree/master/2-Deployment
+    - https://github.com/hossam26644/ebi-technical-test/tree/master/2-Deployment/README.md
  
  - What strategies would be employed to test the service, and how it would be automated.
-    - https://github.com/hossam26644/ebi-technical-test/tree/master/3-Testing
+    - https://github.com/hossam26644/ebi-technical-test/blob/master/3-Testing/README.md
 
 
   
