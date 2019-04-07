@@ -14,7 +14,7 @@
    - Use **layers**, including a load-balancer to distribute traffic among servers.
    - Layering also ensures the ability to smoothly upgrade the system without stopping the service.
 
-  - ##### A **shared cash** among servers running the same service may increase system efficiency.
+  - ##### A **shared cache** among servers running the same service may increase system efficiency.
   - ##### Separation of concerns (Client–server architecture):
     - The service should be separated from UI concerns.
     
@@ -30,20 +30,20 @@
 ## 4. Automate the whole process, including deployment
 
  - Automating the devOps removes the pain of management a large number of services, and stops manual errors.
- - *Jenkins* can be used to automate application building, testing and containerization.
- - *Ansible* can be used to automate application deployment, this includes deployment across different servers.
- - Automated scaling ensures on-the-run scaling of services.
- - *Kubernetes* for automated scaling and management of the services.
+ - Automation software can be used to automate application building, testing and containerization, as *Jenkins*.
+ - Server configuration and management tools can be used to automate application deployment, this includes deployment across different servers, as *Ansible*
+ - Automated scaling ensures on-the-run scaling of services containers.
+ - *Kubernetes* can be used automated scaling and management of the services (Container Orchestration).
  &nbsp;
 # So how gene_suggest service would be deployed (a suggested workflow):
 
  - Code uploaded to a repository (Bitbucket, Github, .. )
  - *Jenkins* runs testing.
- - *Jenkins* containerize application, then calls *Ansible* plugin.
- - *Ansible* configures the server and deploy application.
+ - *Jenkins* containerizes application, then calls *Ansible* plugin.
+ - *Ansible* configures the server and deploys application.
  - Servers cluster may be managed by *Kubernetes* to ensure automated services management and scalability.
  
-> In this model, Ansible can do jenkins role and vise versa, meaning one tool can be enough, but the common usage of each was the reference in creating this workflow
+> In this model, *Ansible* can do *Jenkins* role and vise versa (Plugins exist), meaning one tool can be enough, but the common usage of each was the reference in creating this workflow
 
 <img align="center" src="https://github.com/hossam26644/ebi-technical-test/blob/master/2-Deployment/images/workflow.png">
 
