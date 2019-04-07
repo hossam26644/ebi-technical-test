@@ -1,7 +1,7 @@
 ''' defining the Gene model for the ORM and
 	the schema for serialization
 '''
-from app import db, ma
+from main.application import db, ma
 
 
 class Gene(db.Model):

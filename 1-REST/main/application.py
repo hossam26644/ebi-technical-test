@@ -12,7 +12,7 @@ from configurations import DeploymentConfigurations as configuration
 app = Flask(__name__) #the main app object
 db = SQLAlchemy(app) #the database object
 ma = Marshmallow(app) #marshmallow serialization object
-FILE_HANDLER = FileHandler('errorlogs.txt') #file handler for logging
+FILE_HANDLER = FileHandler('main/errorlogs.txt') #file handler for logging
 FILE_HANDLER.setLevel(WARNING)
 
 
@@ -25,16 +25,12 @@ def configure_app(app, configuration):
     app.config['TESTING'] = configuration.FLASK_TESTING
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = configuration.SQLALCHEMY_TRACK_MODIFICATIONS
     app.config['SQLALCHEMY_POOL_RECYCLE'] = configuration.SQLALCHEMY_POOL_RECYCLE
+
 def initialize_app(app, configuration):
     ''' initialize app object'''
-    #get name space, TODO// relocate to import list
+    #get name space, not following pep8, TODO// relocate to import list
     from namespaces.gene_operations import gene_operations_namespace
     app.logger.addHandler(FILE_HANDLER)
     configure_app(app, configuration)
     api.init_app(app)
     api.add_namespace(gene_operations_namespace)
-
-if __name__ == '__main__':
-    initialize_app(app, configuration)
-    app.run(host='0.0.0.0',debug=configuration.FLASK_DEBUG)
-
