@@ -35,6 +35,8 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
   ```sh
  $  python3 app.py
  ```
+ > You may need to run if libmysqlclient is not installed on the system: apt-get install -y libmysqlclient-dev 
+ 
    - Service starts at http://0.0.0.0:5000/gene-operations/gene-suggest
    - Swagger documentation at http://0.0.0.0:5000/
  # The endpoint accepts the following arguments:
