@@ -6,7 +6,6 @@
 In this repository:
   - REST-like web service  `gene_suggest` source code, with readme file providing how to run  adequate information on how to run application. 
     -  https://github.com/hossam26644/ebi-technical-test/tree/master/1-REST
-    -  Docker repository: hossam26644/gene_suggest
  
   - How the service would be deployed, and how scalability is ensured.
     - https://github.com/hossam26644/ebi-technical-test/tree/master/2-Deployment
