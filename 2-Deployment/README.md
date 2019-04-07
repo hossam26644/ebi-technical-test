@@ -29,11 +29,11 @@
 
 ## 4. Automate the whole process, including deployment
 
- - Automating the devOps removes the pain of management a large number of services, and stops manual errors.
+ - Automating the devOps removes the pain of managing a large number of services, and stops manual errors.
  - Automation software can be used to automate application building, testing and containerization, as *Jenkins*.
  - Server configuration and management tools can be used to automate application deployment, this includes deployment across different servers, as *Ansible*
  - Automated scaling ensures on-the-run scaling of services containers.
- - *Kubernetes* can be used automated scaling and management of the services (Container Orchestration).
+ - *Kubernetes* can be used to automated scaling and management of the services (Container Orchestration).
  &nbsp;
 # So how gene_suggest service would be deployed (a suggested workflow):
 
