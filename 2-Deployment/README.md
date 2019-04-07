@@ -2,11 +2,11 @@
 
 # How scalability is ensured:
  
-## 1. containerization:
+## 1. Containerization:
   <img align="right" src="https://d.martinsefcik.sk/uploads/-/system/group/avatar/7/docker-logo.png">
 
- - Ensures the ability to run identical copies of the service across multiple servers (horizontal scalability)
- - Makes deployment on servers easier.
+ - Ensures the ability to run identical copies of the service across multiple servers (horizontal scalability).
+ - Deployment on servers requires no code change.
 ## 2. Stick to the  RESTful system architectural constraints, including:
 <img align="right" src="https://raw.githubusercontent.com/hossam26644/ebi-technical-test/master/2-Deployment/images/REST.png">
 
@@ -31,21 +31,24 @@
 
  - Automating the devOps removes the pain of management a large number of services, and stops manual errors.
  - *Jenkins* can be used to automate application building, testing and containerization.
- - *Ansible* can be used to automate application deployment, this includes deployment across multiple different servers.
- - Automated scaling ensures on the run scaling of services.
+ - *Ansible* can be used to automate application deployment, this includes deployment across different servers.
+ - Automated scaling ensures on-the-run scaling of services.
  - *Kubernetes* for automated scaling and management of the services.
  &nbsp;
 # So how gene_suggest service would be deployed (a suggested workflow):
 
  - Code uploaded to a repository (Bitbucket, Github, .. )
- - *Jenkins* run testing.
+ - *Jenkins* runs testing.
  - *Jenkins* containerize application, then calls *Ansible* plugin.
  - *Ansible* configures the server and deploy application.
- - Servers cluster may be managed by *Kubernetes* to ensure automated services managment and scalability.
+ - Servers cluster may be managed by *Kubernetes* to ensure automated services management and scalability.
  
 > In this model, Ansible can do jenkins role and vise versa, meaning one tool can be enough, but the common usage of both was the reference in creating this workflow
 
 <img align="center" src="https://github.com/hossam26644/ebi-technical-test/blob/master/2-Deployment/images/workflow.png">
+
+
+
 
 
 
