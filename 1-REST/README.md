@@ -33,7 +33,7 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
  ```
    - Start service:
   ```sh
- $  python3 app.py
+ $  python3 run.py
  ```
  > You may need to run: *apt-get install -y libmysqlclient-dev* , if libmysqlclient is not installed on the system:
  
@@ -59,16 +59,19 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
 ```
 1-REST
 │─── README.md
-│─── app.py                            # main file, run to start service    
+│─── run.py                            # run to start service    
 │─── configurations.py                 # holds service configuration for Debugging, testing and deployment
-│───  test_file.py                     # Automated testing file,
-│───  Dockerfile                        
-│───  errorlogs.txt                    # Server writes error logs in this file
-│───  requirements.txt                 # contains a pinned version of everything that was installed by pip3
-│───  __init__.py
+│─── test_file.py                      # Automated testing file,
+│─── Dockerfile                       
+│─── requirements.txt                  # contains a pinned version of pip3 installations
+│
+└──────────── main
+│             │─── application.py             # main file, initializes and configures application
+│             │─── errorlogs.txt              # Error logs by server
+│             └───  __init__.py
 │
 └──────────── apis
-│             │───  api.py             # creates the flask api
+│             │───  api.py                # creates the flask api
 │             └───  __init__.py
 │            
 └──────────── namespaces
@@ -76,8 +79,11 @@ Provides a single endpoint `gene_suggest` and responds with a list of suggested 
 │             │───  arguments.py          # arguments expected by endoints
 │             └───  __init__.py
 └──────────── models
-              │───  models.py             # holds the ORM model and Marshmallow model for serialization
-              └───  __init__.py
+│             │───  models.py             # holds the ORM model and Marshmallow model for serialization
+│             └───  __init__.py
+│
+└──────────── env                         # virtual environment
+              │
 ```
 
 > Namespace gene_operations is created, to act as a root to the end point.
@@ -93,3 +99,23 @@ some curl commands to try the service
   ```sh
  $ curl -X GET "http://18.218.244.207:5000/gene_operations/gene_suggest?query=hnf&species=ailuropoda_melanoleuca&limit=5" -H  "accept: application/json"
  ```
+&nbsp;
+
+# test_file.py:
+  - Simple API testing file with 2 test cases driven from service specifications.
+  - Checks that endpoint exists from status code.
+  - Checks that results:
+    - Are in order.
+    - Have fewer number than limit.
+    - Returned with status code 200 (OK)
+
+To run test_file.py:
+  - Start the virtual environment and install requirments as in the run step.
+  - run the test file:
+  
+  ```sh
+ $  python3 test_file.py
+ ```
+
+
+
