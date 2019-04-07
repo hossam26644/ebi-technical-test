@@ -107,7 +107,7 @@ some curl commands to try the service
   - Checks that results:
     - Are in order.
     - Have fewer number than limit.
-    - returned with status code 200 (OK)
+    - Returned with status code 200 (OK)
 
 To run test_file.py:
   - Start the virtual environment and install requirments as in the run step.
