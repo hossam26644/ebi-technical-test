@@ -33,7 +33,7 @@
  - Automation software can be used to automate application building, testing and containerization, as *Jenkins*.
  - Server configuration and management tools can be used to automate application deployment, this includes deployment across different servers, as *Ansible*
  - Automated scaling ensures on-the-run scaling of services containers.
- - *Kubernetes* can be used to automated scaling and management of the services (Containers Orchestration).
+ - *Kubernetes* can be used to automat scaling and management of the services (Containers Orchestration).
  &nbsp;
 # So how gene_suggest service would be deployed (a suggested workflow):
 
