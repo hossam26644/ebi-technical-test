@@ -16,33 +16,31 @@ class FlaskTestCase(unittest.TestCase):
     client = app.test_client()
 
     def test_end_point_exists(self):
-        ''' Test that end point exists
+        ''' Test that end point exists, response code is not 404
             request with no arguments should give a bad request 400
         '''
         response = self.client.get('/gene_operations/gene_suggest')
-        self.assertEqual(response.status_code, 400)
+        self.assertNotEqual(response.status_code ,404)
 
-    def test_get_known_single_result(self):
-        ''' Testing with one expected result;
-            May fail if database changed.
+    def test_expected_response(self):
+        ''' Test that end point exists, response code is not 404
+            request with no arguments should give a bad request 400
         '''
+        query = "brc"
+        species = "homo_sapiens"
+        limit = 10
         response = self.client.get(
-            "/gene_operations/gene_suggest?species=ailuropoda_melanoleuca&limit=1")
+            "/gene_operations/gene_suggest?query={}&species={}&limit={}".format(
+                                                                        query,
+                                                                        species,
+                                                                        limit))
         data = json.loads(response.get_data(as_text=True))
-        data = self.get_result_list_from_dict(data["result_list"])
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(data, ['5S_rRNA'])
+        data = self.get_result_list_from_dict(data["result_list"]) #extract response as list
+        sorted_data = sorted(data) #note: case sensitive, gene names are upper case
+        self.assertEqual(response.status_code, 200) #test response code
+        self.assertEqual(data, sorted_data) #Test response list is in order
+        self.assertLessEqual(len(data),limit) #test length of response is smaller than or equal the limit
 
-    def test_get_known_multible_results(self):
-        ''' Testing with one multible result;
-            May fail if database changed.
-        '''
-        response = self.client.get(
-            "/gene_operations/gene_suggest?query=brc&species=homo_sapiens&limit=5")
-        data = json.loads(response.get_data(as_text=True))
-        data = self.get_result_list_from_dict(data["result_list"])
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(data, ['BRCA1', 'BRCA2', 'BRCC3', 'BRCC3P1'])
 
     def get_result_list_from_dict(self, dict):
         ''' gets a dictionary result and returns a list '''
@@ -50,5 +48,7 @@ class FlaskTestCase(unittest.TestCase):
         for pair in dict:
             result.append(pair["display_label"])
         return result
+
+
 if __name__ == '__main__':
     unittest.main()

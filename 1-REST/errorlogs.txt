@@ -290,3 +290,33 @@ FROM gene_autocomplete
 WHERE gene_autocomplete.species = %s AND gene_autocomplete.display_label LIKE %s GROUP BY gene_autocomplete.display_label ORDER BY gene_autocomplete.display_label 
  LIMIT %s]
 [parameters: [{}]]
+Exception on /gene_operations/gene_suggest [GET]
+Traceback (most recent call last):
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/namespaces/gene_operations.py", line 25, in get
+    gene_suggestions = self.retrive_list_from_database(query, species, limit)
+TypeError: retrive_list_from_database() missing 1 required positional argument: 'limit'
+Exception on /gene_operations/gene_suggest [GET]
+Traceback (most recent call last):
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/env/lib/python3.6/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/hossam/Documents/EBI/ebi-technical-test/1-REST/namespaces/gene_operations.py", line 25, in get
+    gene_suggestions = self.retrive_list_from_database(query, species, limit)
+TypeError: retrive_list_from_database() missing 1 required positional argument: 'limit'
